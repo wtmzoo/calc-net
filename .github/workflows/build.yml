@@ -64,22 +64,20 @@ jobs:
           ..\.sonar\scanner\dotnet-sonarscanner begin /k:"wtmzoo_calc-net" /o:"wtmzoo" `
             /d:sonar.token="${{ secrets.SONAR_TOKEN }}" `
             /d:sonar.host.url="https://sonarcloud.io" `
-            /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" `
+            /d:sonar.cs.opencover.reportsPaths="coverage.xml" `
             /d:sonar.coverage.exclusions="**Test*.cs"
           
-          # Сборка и тестирование с Coverlet
-          dotnet build
+          dotnet build --no-incremental
+          
           dotnet test `
             --collect:"XPlat Code Coverage" `
             --settings:coverlet.runsettings `
             --logger:"trx;LogFileName=testresults.trx"
           
-          # Преобразование отчета в формат OpenCover
           coverlet .\CalcNet.Tests\bin\Debug\net8.0\CalcNet.Tests.dll `
             --target "dotnet" `
             --targetargs "test .\CalcNet.Tests --no-build" `
             --format opencover `
-            --output "./coverage.opencover.xml"
+            --output "coverage.xml"
           
-          # Завершение анализа SonarQube
           ..\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
