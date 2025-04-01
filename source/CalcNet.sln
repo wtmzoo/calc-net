@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcNet.Cli", "CalcNet.Cli\CalcNet.Cli.csproj", "{FB460BF4-CEBB-4066-9AC0-98307E6B6B8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcNet.Tests", "CalcNet.Tests\CalcNet.Tests.csproj", "{A1B68CF1-9D40-44A8-A68E-108B0CD8B08D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{FB460BF4-CEBB-4066-9AC0-98307E6B6B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB460BF4-CEBB-4066-9AC0-98307E6B6B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB460BF4-CEBB-4066-9AC0-98307E6B6B8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1B68CF1-9D40-44A8-A68E-108B0CD8B08D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B68CF1-9D40-44A8-A68E-108B0CD8B08D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B68CF1-9D40-44A8-A68E-108B0CD8B08D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B68CF1-9D40-44A8-A68E-108B0CD8B08D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
