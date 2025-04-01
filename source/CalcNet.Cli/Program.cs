@@ -4,16 +4,16 @@ namespace CalcNet.Cli;
 
 public static class Program
 {
-    public static void Main(string[] args)
+    public static void Main()
     {
-        var calcObj = new Calculator();
-        
-        Console.WriteLine(calcObj.Add(12, 11));
-        Console.WriteLine(calcObj.Subtract(11, 21));
-        Console.WriteLine(calcObj.Multiply(11, 51));
-        Console.WriteLine(calcObj.Divide(10, 5));
-        Console.WriteLine(calcObj.Power(21, 3));
-        Console.WriteLine(calcObj.SquareRoot(10));
-        Console.WriteLine(calcObj.Percentage(100, 10));
+        Console.WriteLine(Calculator.Add(12, 11));
+        Console.WriteLine(Calculator.Subtract(11, 21));
+        Console.WriteLine(Calculator.Multiply(11, 51));
+        Console.WriteLine(Calculator.Divide(10, 5));
+        Console.WriteLine(Calculator.Power(21, 3));
+        Console.WriteLine(Calculator.SquareRoot(10));
+        Console.WriteLine(Calculator.Percentage(100, 10));
+        Console.WriteLine(Calculator.Add(13, 11));
+        Console.WriteLine(Calculator.Add(15, 41));
     }
 }
