@@ -15,5 +15,6 @@ public static class Program
         Console.WriteLine(Calculator.Percentage(100, 10));
         Console.WriteLine(Calculator.Add(13, 11));
         Console.WriteLine(Calculator.Add(15, 41));
+        Console.WriteLine(Calculator.Add(15, 41));
     }
 }
