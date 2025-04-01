@@ -24,7 +24,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: '9.0.100'
       
       - name: Cache SonarQube packages
         uses: actions/cache@v4
@@ -74,7 +74,7 @@ jobs:
             --settings:coverlet.runsettings `
             --logger:"trx;LogFileName=testresults.trx"
           
-          coverlet .\CalcNet.Tests\bin\Debug\net8.0\CalcNet.Tests.dll `
+          coverlet .\CalcNet.Tests\bin\Debug\net9.0\CalcNet.Tests.dll `
             --target "dotnet" `
             --targetargs "test .\CalcNet.Tests --no-build" `
             --format opencover `
