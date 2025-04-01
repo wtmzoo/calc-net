@@ -79,7 +79,7 @@ jobs:
             --target "dotnet" `
             --targetargs "test .\CalcNet.Tests --no-build" `
             --format opencover `
-            --output "./coverage.xml"
+            --output "./coverage.opencover.xml"
           
           # Завершение анализа SonarQube
           ..\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
